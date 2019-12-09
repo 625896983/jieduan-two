@@ -1,0 +1,282 @@
+@charset "UTF-8";
+a {
+  text-decoration: none;
+  color: grey; }
+
+.margin {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 90px;
+  position: relative; }
+  header #xiahuodong {
+    width: 100px;
+    background: orange;
+    height: 100px;
+    bottom: -100px;
+    position: absolute;
+    z-index: 2;
+    left: 300px; }
+  header #xiamore {
+    width: 100px;
+    background: white;
+    height: 100px;
+    bottom: -100px;
+    position: absolute;
+    z-index: 2;
+    left: 500px; }
+  header span {
+    line-height: 90px;
+    cursor: pointer; }
+    header span:hover {
+      color: orange;
+      font-weight: 700; }
+  header #kuang {
+    margin: auto 0;
+    border: 1px solid #e2e4e6;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 100%;
+    overflow: hidden; }
+    header #kuang input {
+      margin-left: 20px;
+      float: left;
+      height: 30px; }
+    header #kuang img {
+      margin: 5px 10px 0 0;
+      float: right;
+      cursor: pointer; }
+  header img:first-child {
+    width: 215px;
+    height: 63px; }
+  header input {
+    border: 0; }
+  header .ora {
+    margin-top: 27px;
+    cursor: pointer; }
+    header .ora p {
+      height: 18px;
+      width: 18px;
+      margin-left: 7px; }
+    header .ora .deng {
+      background: url("images/小人3.jpg");
+      background-size: 36px 36px; }
+    header .ora .zhu {
+      background: url("images/小人3.jpg");
+      background-size: 36px 36px;
+      background-position: 0 -18px; }
+    header .ora i {
+      font-style: normal; }
+
+banner {
+  border-top: 2px solid #ebeced;
+  height: 400px;
+  display: inline-block;
+  position: relative;
+  width: 100%; }
+  banner img {
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0; }
+
+main #hot {
+  margin-top: 30px;
+  height: 68px; }
+  main #hot h1 {
+    float: left;
+    line-height: 68px; }
+  main #hot span {
+    float: right; }
+    main #hot span a {
+      color: #acb6c1;
+      margin: 0 14px;
+      line-height: 68px; }
+
+main #box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  main #box .sbox {
+    width: 285px;
+    position: relative;
+    height: 329px;
+    border: 1px solid #eef0f2;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor: pointer; }
+    main #box .sbox img {
+      margin: 40px 0 10px 0;
+      transition: 0.3s linear; }
+    main #box .sbox > p {
+      padding: 26px 32px;
+      line-height: 24px; }
+    main #box .sbox div p {
+      border: 1px solid #eef0f2;
+      display: inline-block;
+      height: 26px;
+      padding: 5px;
+      font-size: 16px;
+      margin: 5px; }
+    main #box .sbox h3 {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      background: orange;
+      line-height: 100%;
+      text-align: center;
+      color: white;
+      font-size: bold;
+      bottom: -20px;
+      transition: 0.3s linear; }
+  main #box .sbox:hover img {
+    margin: 10px 0 10px 0; }
+  main #box .sbox:hover h3 {
+    bottom: 0px; }
+
+#sale {
+  background: #f2f4f6; }
+  #sale .gold {
+    margin-top: 28px;
+    line-height: 70px; }
+    #sale .gold i {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: normal; }
+    #sale .gold span {
+      font: 12px/70px "";
+      color: #9da1aa; }
+  #sale #box1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #sale #box1 .sbox1 {
+      margin: 5px 0;
+      height: 362px;
+      width: 386px;
+      border: 1px solid #ebeced;
+      box-sizing: border-box;
+      padding: 20px;
+      position: relative;
+      transition: 0.4s linear;
+      cursor: pointer; }
+      #sale #box1 .sbox1 h3 {
+        font: 16px/50px "";
+        text-indent: 12px; }
+      #sale #box1 .sbox1 h4 {
+        font: 14px/20px ""; }
+    #sale #box1 .sbox1:hover {
+      transform: translateY(-20px); }
+    #sale #box1 .sbox1:hover h3 {
+      color: orange; }
+    #sale #box1 .sbox1 p:hover b {
+      background: orange;
+      color: white; }
+    #sale #box1 p {
+      position: absolute;
+      bottom: 0;
+      height: 64px;
+      line-height: 100%;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-top: 1px solid #ebeced; }
+      #sale #box1 p span {
+        font-size: 12px;
+        margin-top: 28px; }
+        #sale #box1 p span i {
+          font-size: 12px;
+          color: orange; }
+      #sale #box1 p b {
+        width: 90px;
+        height: 32px;
+        border: 1px solid gray;
+        text-align: center;
+        font: 12px/32px "";
+        border-radius: 16px;
+        margin-right: 50px;
+        margin-top: 15px; }
+
+#zhibo {
+  cursor: pointer; }
+  #zhibo .gold {
+    margin-top: 28px;
+    line-height: 70px; }
+    #zhibo .gold i {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: normal; }
+    #zhibo .gold span {
+      font: 12px/70px "";
+      color: #9da1aa; }
+  #zhibo #box2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #zhibo #box2 .sbox2 {
+      margin: 10px; }
+      #zhibo #box2 .sbox2 .bimg {
+        position: relative;
+        overflow: hidden; }
+        #zhibo #box2 .sbox2 .bimg .img {
+          width: 270px;
+          height: 150px;
+          transition: 0.4s linear; }
+        #zhibo #box2 .sbox2 .bimg .end {
+          position: absolute;
+          right: 10px;
+          top: 10px; }
+        #zhibo #box2 .sbox2 .bimg:hover .img {
+          transform: scale(1.15, 1.15); }
+      #zhibo #box2 .sbox2 h3 {
+        font: 16px/44px ""; }
+        #zhibo #box2 .sbox2 h3:hover {
+          color: orange; }
+      #zhibo #box2 .sbox2 span {
+        font: 12px/18px "";
+        color: #a19999; }
+        #zhibo #box2 .sbox2 span i {
+          font-style: normal;
+          color: orange; }
+
+footer {
+  background: #f2f4f6; }
+  footer p {
+    height: 50px;
+    border-bottom: 2px solid #e2e4e6; }
+  footer .about .sabout {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 38px; }
+    footer .about .sabout .tit {
+      font: 700 18px/1 "";
+      margin-bottom: 10px; }
+    footer .about .sabout .item ul {
+      text-align: center;
+      font: 16px/36px "";
+      color: grey; }
+
+#friend {
+  background: #f2f4f6; }
+  #friend .friend .label {
+    font: 14px/30px ""; }
+  #friend .friend .item_wrap {
+    font: 14px/26px ""; }
+    #friend .friend .item_wrap a {
+      margin-right: 12px; }
+
+#bottom {
+  height: 32px;
+  background: #444444;
+  text-align: center;
+  color: #999999;
+  line-height: 32px; }
