@@ -9,30 +9,60 @@
 </head>
 
 <body>
-	<header class="margin">
+	<div id="black">
+		<div id="ycdl">
+			<h1>登录<img src="images/xxx.jpg" id="xxx"/></h1>
+			<ul>
+				<li><input type="text" placeholder="账号"></li>
+				<li><input type="password" placeholder="密码"></li>
+			</ul>
+			<p>登录</p>
+			
+			<a href="注册.html">还没账号？立即注册</a>
+			
+		</div>
+	</div>
+	<header class="margin" style="overflow: visible;" id="header">
 		<img src="images/logo.jpg"/>
 		
-		<span style="font:700 36px/90px '';color:red;">立即选购</span>
+		<span style="font:700 36px/90px '';color:red;" id="red">立即选购</span>
 	
-		<span id="huodong">活动</span>
-		<span id="more">更多</span>
-		<div id="xiahuodong"><span>活动均已结束</span></div>
+		<span id="huodong">活动<div id="xiahuodong"><span>活动均已结束</span></div></span>
+		<span id="more"><span>更多</span>
 		<div id="xiamore">
 			<ul>
 				<li>电子</li>
 				<li>鞋包</li>
 			</ul>
 		</div>
-		<div id="kuang"><input placeholder="请输入关键字"/><img src="images/search.jpg"/></div>
+		</span>
+		
+		<div id="kuang"><input placeholder="请输入关键字"/><img src="images/search.jpg" id="search"/></div>
 		<div>
-			<div class="ora"><p class="deng"></p><i>登陆</i></div>
+			<div class="ora dd"><p class="deng"></p><i>登陆</i></div>
 		</div>
 		<div>
-			<div class="ora"><p class="zhu"></p><i>注册</i></div>
+			<div class="ora zz"><p class="zhu"></p><i>注册</i></div>
 		</div>
 	</header>
 <banner class="banner1 box">
 	<div class="imgbox">
+		<ul id="floor">
+			<li><a >回到顶部</a></li>
+			<li><a>热门平台</a></li>
+			<li><a >金牌卖家</a></li>
+			<li><a >直播平台</a></li>
+			
+		</ul>
+		<ul id="guojia">
+			<li><span><b>北美</b><i>亚马逊</i><i>Wish</i><em>></em></span></li>
+			<li><span><b>欧洲</b><i>Cdiscount</i><i>PriceMinister</i><em>></em></span></li>
+			<li><span><b>俄罗斯</b><i>速卖通</i><i>Joom</i><em>></em></span></li>
+			<li><span><b>日韩</b><i>日本乐天</i><i>11street</i><em>></em></span></li>
+			<li><span><b>澳洲</b><i>trademe</i><i>eBay</i><em>></em></span></li>
+			<li><span><b>中东</b><i>Souq</i><i>killimall</i><em>></em></span></li>
+			<li><span><b>印度</b><i>Paytm</i><i>Flipkart</i><em>></em></span></li>
+		</ul>
 				<img src="images/banner1.jpg"/>
 				<img src="images/banner2.png"/>
 				<img src="images/banner3.jpg"/>
@@ -40,12 +70,12 @@
 			
 			</div>
 			<div class="btns">
-				<input type="button" id="left" value="<<<" />
-				<input type="button" id="right" value=">>>" />
+				<input type="button" id="left" value="&lt;&lt;&lt;" />
+				<input type="button" id="right" value="&gt;&gt;&gt;" />
 			</div>
 </banner>
 <main class="margin">
-	<div id="hot"><h1>热门平台</h1><span><a href="#">北美</a><a href="#">欧洲</a><a href="#">日韩</a> </span></div>
+	<div id="hot"><h1>热门平台</h1><span><a href="#" class="now">北美</a><a href="#">欧洲</a><a href="#">日韩</a> </span></div>
 	<div id="box">
 		<div class="sbox">
 			<img src="images/亚马逊1.jpg"/>
@@ -332,6 +362,7 @@
 	
 	<script src="jQuery.js" type="text/javascript"></script>
 	<script src="jquery.banner.1.js"></script>
+	<script src="scss.js"></script>
 	<script src="scss.css" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(".banner1").banner({
@@ -344,7 +375,27 @@
 			delayTime:5000,
 			moveTime:2000
 		});
-		
+		 $("#floor li").click(function(){
+//			
+			if($(this).index()==0){
+					
+			$("html").animate({
+				scrollTop:0
+			})
+			}else if($(this).index()==1){
+					 $("html").animate({
+				scrollTop:$("#hot").offset().top
+			})
+					 }else if($(this).index()==2){
+						  $("html").animate({
+				scrollTop:$("#sale").offset().top
+			})
+					 }else if($(this).index()==3){
+						  $("html").animate({
+				scrollTop:$("#zhibo").offset().top
+			})
+//		
+		}})
 //		
 	</script>
 </html>

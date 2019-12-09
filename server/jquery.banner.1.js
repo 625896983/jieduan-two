@@ -69,6 +69,8 @@
 			}).eq(that._obj_.index).css({
 				background:"red"
 			})
+			
+			
 		}
 		if(this._obj_.autoplay){
 			this._obj_.t=setInterval(()=>{
@@ -82,21 +84,22 @@
 					
 					btnright();
 					
-				},that._obj_.delayTime)
+				},that._obj_.delaytime)
 			})
 	}
 		//小按钮的样式全部是抄来的
 	if(this._obj_.list){
-//			4-1.创建小按钮
+
 			var str = "";
 			for(var i=0;i<options.items.length;i++){
-				str += `<li>${i+1}</li>`;
+				str += `<li></li>`;
 			}
-//			4-2.创建小按钮的框,并设置框和小按钮的样式
+
 			$("<ul class='list'>").html(str).appendTo(this).css({
 				width:"100%",
 				height:30,
 				display:"flex",
+				justifyContent:"center",
 				position:"absolute",
 				left:0,
 				bottom:0,
@@ -104,9 +107,13 @@
 				padding:0,
 				listStyle:"none"
 			}).children().css({
-				flex:1,
-				borderLeft:"solid 1px black",
-				borderRight:"solid 1px black",
+//				flex:1,
+//				borderLeft:"solid 1px black",
+//				borderRight:"solid 1px black",
+				width:20,
+				height:20,
+				borderRadius:10,
+				margin:"0 20px",
 				background:"rgba(200,200,200,0.6)",
 				lineHeight:"30px",
 				textAlign:"center",

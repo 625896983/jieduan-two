@@ -11,6 +11,9 @@ header {
   display: flex;
   justify-content: space-around;
   height: 90px; }
+  header a {
+    line-height: 90px;
+    cursor: pointer; }
   header span {
     line-height: 90px;
     cursor: pointer; }
@@ -63,7 +66,8 @@ main {
         main .margin #newzhuce #smallzhuce ul li:nth-child(1) input, main .margin #newzhuce #smallzhuce ul li:nth-child(2) input {
           border: 0;
           background: #f3f4f4;
-          font: 14px/38px ""; }
+          font: 14px/38px "";
+          width: 340px; }
       main .margin #newzhuce #smallzhuce ul li:nth-child(3) {
         display: flex;
         justify-content: space-between;
