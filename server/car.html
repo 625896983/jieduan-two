@@ -11,11 +11,13 @@
 	<header class="margin">
 		<img src="images/logo.jpg"/>
 		
-		<span style="font:700 36px/90px '';color:red;">返回商品列表</span>
+		<a style="font:700 36px/90px '';color:red;" href="detail.html">返回商品详情</a>
 	
+<!--
 		<span>活动</span>
 		<span>更多</span>
 		<div id="kuang"><input placeholder="请输入关键字"/><img src="images/search.jpg"/></div>
+-->
 		
 	</header>
 	<h1></h1>
@@ -23,8 +25,16 @@
 		<div class="margin">
 	<h4>当前：<i>购物车</i></h4>
 			<p><input type="checkbox" checked="checked"/><span>商品</span><span>单价</span><span>数量</span><span>小计</span><span>操作</span></p>
-			<ul>
-				<li><input type="checkbox" checked="checked" class="check"/><img src="images/鞋包1.jpg"><div>parkii挎包<br><span>蓝色</span><span>豪华版</span></div><span>￥999.00</span><div class="gouwu"><p><b>-</b><span>1</span><b>+</b></p></div><span>￥999.00</span><input type="button" value="删除" class="delete"></li>
+			<ul id="goodlist">
+				<li>
+					<input type="checkbox" checked="checked" class="check"/>
+					<img src="images/鞋包1.jpg" class="img">
+					<div>parkii挎包<br><span class="color">蓝色</span><span class="version">豪华版</span></div>
+					<span class="price">￥999.00</span>
+					<div class="gouwu"><p><b class="jian">-</b><span class="number">1</span><b class="add">+</b></p></div>
+					<span class="allprice">￥999.00</span>
+					<input type="button" value="删除" class="delete">
+				</li>
 			</ul>
 			<div id="jiesuan">
 				<span>已选择<strong>1</strong>件商品</span>
@@ -149,4 +159,6 @@
 	</div>
 	<h6 id="bottom">©2013 雨果网 闽ICP备11004599号-1 </h6>
 </body>
+	<script src="cookie.js"></script>
+	<script src="car.js"></script>
 </html>
