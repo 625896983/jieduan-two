@@ -13,28 +13,25 @@
 		
 		<a style="font:700 36px/90px '';color:red;" href="index.html">返回首页</a>
 	
-<!--
-		<span>活动</span>
-		<span>更多</span>
--->
-		<div id="kuang"><input placeholder="请输入关键字"/><img src="images/search.jpg"/></div>
+		
+		<div id="kuang"><input placeholder="请输入关键字" id="keyword"/><img src="images/search.jpg" id="wenhao"/></div>
 	
 	</header>
 	<nav class="margin">
-		<span>全部</span>
-		<span>电子</span>
-		<span>鞋包</span>
-		<span style="color:gray">运动户外(已售罄)</span>
-		<span style="color:gray">母婴玩具(已售罄)</span>
-		<span style="color:gray">家具家居(已售罄)</span>
+		<span id="all" class="orange">全部</span>
+		<span id="dianzi">电子</span>
+		<span id="xie">鞋包</span>
+		<span>运动户外（已售罄）</span>
+		<span>母婴玩具（已售罄）</span>
+		<span>家具家居（已售罄）</span>
 	
 	</nav>
 	<main>
 		<div class="margin">
-	<h4>当前：<i>全部</i></h4>
+	<h4>当前：<i id="dangqian">全部</i></h4>
 			<h5>商品列表：</h5>
 			<div id="box4">
-				<div class="sbox4">
+				<!--<div class="sbox4">
 					<img src="images/电子1.jpg">
 					<h6>
 						主动降噪耳机
@@ -87,7 +84,7 @@
 					<span>
 						新款降噪耳机
 					</span>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</main>
@@ -209,4 +206,9 @@
 	<h6 id="bottom">©2013 雨果网 闽ICP备11004599号-1 </h6>
 </body>
 	<script src="ajax.js"></script>
+	
+	
+	<script src="cookie.js"></script>
+	<script src="list.js"></script>
+	
 </html>

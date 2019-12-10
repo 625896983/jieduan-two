@@ -11,13 +11,16 @@
 	<header class="margin">
 		<img src="images/logo.jpg"/>
 		
-		<span style="font:700 36px/90px '';color:red;">返回首页</span>
+		<a style="font:700 36px/90px '';color:red;" href="list.html">返回商品列表</a>
 	
-		<span>活动</span>
+<!--		<span>活动</span>-->
+<!--
 		<span>更多</span>
 		<div id="kuang"><input placeholder="请输入关键字"/><img src="images/search.jpg"/></div>
+-->
 	
 	</header>
+<!--
 	<nav class="margin">
 		<span>电子</span>
 		<span>鞋包</span>
@@ -26,24 +29,25 @@
 		<span>家具家居</span>
 	
 	</nav>
+-->
 	<main>
 		<div class="margin">
-	<h4>当前：<i>鞋包</i></h4>
-			<h5>商品详情：</h5>
+	<h4>当前：<i>商品详情</i></h4>
+			
 			<div id="bleft">
-				<h2>parkii挎包</h2>
+				<h2 id="goodname"></h2>
 				<div class="bimgbox">
 					
-					<div class="imgbox"><img src="images/鞋包1.jpg"/></div>
+					<div class="imgbox"><img src=""  id="smallimg"/></div>
 					<div class="detailbox">
 						
 						<div class="miaosha">
 							<p>
 								<em><img src="images/闹钟1.jpg"/><b>秒杀闪购</b></em>
-								<span>距离结束<i>0</i>天<i>0</i>小时<i>2</i>分<i>2</i>秒</span>
+								<span>距离结束<i>0</i>天<i id="hour">1</i>小时<i id="minute"></i>分<i id="second"></i>秒</span>
 							</p>
 							<ul>
-								<li><span>秒 杀 价 </span><em> ￥999</em><i>9999</i></li>
+								<li><span>秒 杀 价 </span><em id="price"> </em><i>9999</i></li>
 								<li><span>选择颜色 </span><b class="selected">蓝色</b><b>红色</b></li>
 								<li><span>选择版本 </span><b>豪华版</b><b>标准版</b></li>
 								<li><span>分期付款 </span><strong> 该商品不支持分期</strong></li>
@@ -53,7 +57,7 @@
 					</div>
 					
 				</div>
-				<div id="xiangqing"><h1>商品详情：</h1><div>服饰品类：包括潮流风向，如欧美、日系等；<br>
+				<div id="xiangqing"><h1>商品详情：</h1><div>商品品类：包括潮流风向，如欧美、日系等；<br>
 设计亮点，如镂空、绣花等；<br>
 
 
@@ -226,5 +230,10 @@
 
 	</div>
 	<h6 id="bottom">©2013 雨果网 闽ICP备11004599号-1 </h6>
+	
 </body>
+	<script src="ajax.js"></script>
+	
+	<script src="cookie.js"></script>
+	<script src="detail.js"></script>
 </html>

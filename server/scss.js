@@ -108,7 +108,8 @@
 					alert("直播已结束");
 				}}
 	  this.xxx.onclick=function(){
-		that.black.style.display="none"  
+		that.black.style.display="none" ;
+		  that.cjmm.value="";
 	  }
 	  this.ouzhou.onclick=function(){
 		 for(let i=0;i<that.sbox.length;i++){
