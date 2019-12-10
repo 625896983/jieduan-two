@@ -13,12 +13,9 @@ header {
   display: flex;
   justify-content: space-around;
   height: 90px; }
-  header span {
+  header a {
     line-height: 90px;
     cursor: pointer; }
-    header span:hover {
-      color: orange;
-      font-weight: 700; }
   header #kuang {
     margin: auto 0;
     border: 1px solid #e2e4e6;

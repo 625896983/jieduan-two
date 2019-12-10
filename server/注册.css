@@ -16,7 +16,8 @@ header {
     cursor: pointer; }
   header span {
     line-height: 90px;
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
     header span:hover {
       color: orange;
       font-weight: 700; }
@@ -28,6 +29,8 @@ main {
   height: 553px;
   border-top: 2px solid #ebeced;
   background: #f3f4f4; }
+  main .margin #yiyou {
+    display: none; }
   main .margin > p {
     margin-top: 8px;
     height: 59px;
@@ -69,7 +72,7 @@ main {
           font: 14px/38px "";
           width: 340px; }
       main .margin #newzhuce #smallzhuce ul li:nth-child(3) {
-        display: flex;
+        display: none;
         justify-content: space-between;
         width: 340px; }
         main .margin #newzhuce #smallzhuce ul li:nth-child(3) input {
@@ -108,7 +111,8 @@ main {
         color: white;
         border-radius: 3px;
         font: 700 16px/44px "";
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
 
 footer {
   background: #f2f4f6; }

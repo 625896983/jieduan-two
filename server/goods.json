@@ -1,0 +1,51 @@
+[{
+    "img":"images/电子1.jpg",
+    "name":"电子1",
+    "price":"111",
+    "goodsId":"d1"
+},{
+    "img":"images/电子2.jpg",
+    "name":"电子2",
+    "price":"222",
+    "goodsId":"d2"
+},{
+    "img":"images/电子3.jpg",
+    "name":"电子3",
+    "price":"333",
+    "goodsId":"d3"
+},{
+    "img":"images/电子4.jpg",
+    "name":"电子4",
+    "price":"444",
+    "goodsId":"d4"
+},{
+    "img":"images/电子5.jpg",
+    "name":"电子5",
+    "price":"555",
+    "goodsId":"d5"
+},{
+    "img":"images/鞋包1.jpg",
+    "name":"鞋包1",
+    "price":"111",
+    "goodsId":"x1"
+},{
+    "img":"images/鞋包2.jpg",
+    "name":"鞋包2",
+    "price":"222",
+    "goodsId":"x2"
+},{
+    "img":"images/鞋包3.jpg",
+    "name":"鞋包3",
+    "price":"333",
+    "goodsId":"x3"
+},{
+    "img":"images/鞋包4.jpg",
+    "name":"鞋包4",
+    "price":"444",
+    "goodsId":"x4"
+},{
+    "img":"images/鞋包5.jpg",
+    "name":"鞋包5",
+    "price":"555",
+    "goodsId":"x5"
+}]
