@@ -1,51 +1,51 @@
 [{
     "img":"images/电子1.jpg",
     "name":"电子1",
-    "price":"111",
+    "price":"111.00",
     "goodsId":"d1"
 },{
     "img":"images/电子2.jpg",
     "name":"电子2",
-    "price":"222",
+    "price":"222.00",
     "goodsId":"d2"
 },{
     "img":"images/电子3.jpg",
     "name":"电子3",
-    "price":"333",
+    "price":"333.00",
     "goodsId":"d3"
 },{
     "img":"images/电子4.jpg",
     "name":"电子4",
-    "price":"444",
+    "price":"444.00",
     "goodsId":"d4"
 },{
     "img":"images/电子5.jpg",
     "name":"电子5",
-    "price":"555",
+    "price":"555.00",
     "goodsId":"d5"
 },{
     "img":"images/鞋包1.jpg",
     "name":"鞋包1",
-    "price":"111",
+    "price":"111.00",
     "goodsId":"x1"
 },{
     "img":"images/鞋包2.jpg",
     "name":"鞋包2",
-    "price":"222",
+    "price":"222.00",
     "goodsId":"x2"
 },{
     "img":"images/鞋包3.jpg",
     "name":"鞋包3",
-    "price":"333",
+    "price":"333.00",
     "goodsId":"x3"
 },{
     "img":"images/鞋包4.jpg",
     "name":"鞋包4",
-    "price":"444",
+    "price":"444.00",
     "goodsId":"x4"
 },{
     "img":"images/鞋包5.jpg",
     "name":"鞋包5",
-    "price":"555",
+    "price":"555.00",
     "goodsId":"x5"
 }]

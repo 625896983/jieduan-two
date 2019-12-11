@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		h1{font:55px/80px "";}
+		
+	</style>
+</head>
+
+<body>
+	<h1>请付款<span id="yuan"></span>元</h1>
+	<img />
+	
+</body>
+	<script src="cookie.js"></script>
+	<script>
+		var yuan=document.getElementById("yuan")
+		var h1=document.querySelector("h1")
+		var a=getCookie("moeny");
+		yuan.innerHTML=a[0].zongjia
+		setInterval(()=>{
+			var rand1=Math.round(Math.random*255)
+			var rand2=Math.round(Math.random*255)
+			var rand3=Math.round(Math.random*255)
+			h1.style.color=`rgba(${rand1},${rand2},${rand3})`
+		},1000)
+		
+	</script>
+</html>

@@ -2,7 +2,11 @@
 class Detail{
 	constructor(){
 		this.goodname=document.getElementById("goodname")
+		
 		this.smallimg=document.getElementById("smallimg")
+		this.bbimg=document.getElementById("bbimg")
+		this.imgbox=document.getElementById("imgbox")
+		this.bbimgbox=document.getElementById("bbimgbox")
 		this.minute=document.getElementById("minute")
 		this.selected=document.getElementsByClassName("selected")
 		this.second=document.getElementById("second")
@@ -80,6 +84,7 @@ class Detail{
 		window.onload=function(){
 			that.goodname.innerHTML=that.nowname
 			that.smallimg.src=that.nowsrc
+			that.bbimg.src=that.nowsrc
 			that.price.innerHTML=that.nowprice
 			
 		}

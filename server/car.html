@@ -24,8 +24,9 @@
 	<main>
 		<div class="margin">
 	<h4>当前：<i>购物车</i></h4>
-			<p><input type="checkbox" checked="checked"/><span>商品</span><span>单价</span><span>数量</span><span>小计</span><span>操作</span></p>
+			<p><input type="checkbox" checked="checked" id="allcheck" /><span>商品</span><span>单价</span><span>数量</span><span>小计</span><span>操作</span></p>
 			<ul id="goodlist">
+<!--
 				<li>
 					<input type="checkbox" checked="checked" class="check"/>
 					<img src="images/鞋包1.jpg" class="img">
@@ -35,10 +36,11 @@
 					<span class="allprice">￥999.00</span>
 					<input type="button" value="删除" class="delete">
 				</li>
+-->
 			</ul>
 			<div id="jiesuan">
-				<span>已选择<strong>1</strong>件商品</span>
-				<div><i>总价：<em>￥999.00</em></i><b>去结算</b></div>
+				<span>已选择<strong id="allnum"></strong>件商品</span>
+				<div><i>总价：<em id="money"></em></i><b id="jiesuan">去结算</b></div>
 			</div>
 		</div>
 	</main>
