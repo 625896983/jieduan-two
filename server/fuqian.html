@@ -4,28 +4,33 @@
 <meta charset="utf-8">
 <title>无标题文档</title>
 	<style>
+		body{text-align: center;}
 		h1{font:55px/80px "";}
+		img{width:360px;height:480px;}
 		
 	</style>
 </head>
 
 <body>
-	<h1>请付款<span id="yuan"></span>元</h1>
-	<img />
+	<h1>请付款<span id="yuan"></span>元</h1><br>
+	<img src="images/E19D7D153D002983036F116F2E5C2F68.png"/>
+	<img src="images/IMG_0426.JPG"/>
 	
 </body>
 	<script src="cookie.js"></script>
 	<script>
 		var yuan=document.getElementById("yuan")
 		var h1=document.querySelector("h1")
-		var a=getCookie("moeny");
+		var a=JSON.parse(getCookie("money"));
+//		console.log(a[0])
 		yuan.innerHTML=a[0].zongjia
 		setInterval(()=>{
-			var rand1=Math.round(Math.random*255)
-			var rand2=Math.round(Math.random*255)
-			var rand3=Math.round(Math.random*255)
-			h1.style.color=`rgba(${rand1},${rand2},${rand3})`
-		},1000)
+			var rand1=Math.round(Math.random()*255)
+//			console.log(rand1)
+			var rand2=Math.round(Math.random()*255)
+			var rand3=Math.round(Math.random()*255)
+			h1.style.color=`rgba(${rand1},${rand2},${rand3},1)`
+		},500)
 		
 	</script>
 </html>

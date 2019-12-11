@@ -88,7 +88,8 @@ main {
       height: 318px;
       text-align: center;
       margin: 0 30px;
-      float: left; }
+      float: left;
+      cursor: pointer; }
       main #box4 .sbox4 img {
         width: 224px;
         height: 224px; }

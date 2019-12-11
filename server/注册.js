@@ -75,7 +75,7 @@ class Zhuce{
 				alert("注册成功 确定后将自动登录");
 				setTimeout(()=>{
 					location.href="index.html"
-				},2000)
+				},500)
 			}
 }
 new Zhuce();

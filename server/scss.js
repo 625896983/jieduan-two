@@ -9,6 +9,10 @@
 		this.black=document.getElementById("black");
 		this.red=document.getElementById("red");
 			this.beimei=document.getElementById("beimei");
+			this.erji=document.getElementById("erji");
+			this.box=document.getElementsByClassName("box");
+			this.sanji=document.getElementById("sanji");
+			this.guojia=document.getElementById("guojia");
 			this.ouzhou=document.getElementById("ouzhou");
 			this.rihan=document.getElementById("rihan");
 			this.cjdl=document.getElementById("cjdl");
@@ -141,6 +145,7 @@
 		  that.rihan.className="now";
 		  that.ouzhou.className=""
 	  }
+	 this.erJi();
 	  }
 //	if(this.type==0){
 //		this.tou1.innerHTML="登录";
@@ -211,8 +216,41 @@
 						alert("用户名尚未注册")
 					}
 		}
-		
-		
+		erJi(){
+			var that=this
+			this.guojia.addEventListener("mouseover",function(e){
+				var target=e.target
+				if(target.tagName=="LI"){
+					that.nowindex=target.getAttribute("index");
+					that.erji.style.display="block";
+					if(parseInt(that.nowindex) >=5){that.erji.style.top=10+5*54 +"px"}else{
+						that.erji.style.top=10+parseInt(that.nowindex)*54 +"px"
+					}
+					
+					that.sanji.style.display="none"
+				}
+				
+			})
+			this.erji.addEventListener("mouseover",function(e){
+			var target=e.target
+				if(target.tagName=="LI"){
+					that.nowerindex=target.getAttribute("index");
+					that.sanji.style.display="block";
+					if(parseInt(that.nowindex) >=4){that.sanji.style.top=-54*(2-parseInt(that.nowerindex)) +"px"}else{
+						that.sanji.style.top=parseInt(that.nowerindex)*54 +"px"
+					}
+					
+					
+				}
+				
+			})	
+			this.box[0].addEventListener("mouseleave",function(){
+				that.sanji.style.display="none";
+				that.erji.style.display="none";
+			})
+		}
 	}
+		
+	
 	new Scss();
 //})();

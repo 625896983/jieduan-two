@@ -78,7 +78,8 @@ main {
     height: 50px; }
     main .margin > p input {
       position: absolute;
-      left: 10px; }
+      left: 10px;
+      cursor: pointer; }
     main .margin > p span:nth-child(2) {
       position: absolute;
       left: 135px; }
@@ -108,10 +109,12 @@ main {
         margin-left: 110px; }
       main .margin ul li .check {
         position: absolute;
-        left: 10px; }
+        left: 10px;
+        cursor: pointer; }
       main .margin ul li .delete {
         position: absolute;
-        left: 1092px; }
+        left: 1092px;
+        cursor: pointer; }
       main .margin ul li div:nth-child(3) {
         position: absolute;
         left: 200px; }
@@ -137,7 +140,8 @@ main {
           height: 24px; }
           main .margin ul li .gouwu p b {
             border: 1px solid;
-            flex: 1; }
+            flex: 1;
+            cursor: pointer; }
           main .margin ul li .gouwu p span {
             flex: 3;
             border: 1px solid; }
@@ -173,7 +177,10 @@ main {
       box-sizing: border-box;
       text-align: center;
       padding-top: 14px;
-      margin-left: 20px; }
+      margin-left: 20px;
+      cursor: pointer; }
+      main #jiesuan div b:active {
+        background: orange; }
 
 footer {
   background: #f2f4f6;

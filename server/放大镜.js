@@ -14,6 +14,7 @@ class Magnifier{
 				var that = this;
 //				绑定事件
 //				进入
+				var a
 				this.sBox.onmouseover = function(){
 //					3.显示隐藏的内容
 					that.over()
@@ -29,6 +30,7 @@ class Magnifier{
 //					5.隐藏
 					that.out()
 				}
+				
 				
 			}
 			over(){

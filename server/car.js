@@ -14,15 +14,20 @@ class Car{
 		this.jieSuan();
 	}
 	load(){
+		var that=this
 		var str=""
 		this.goodMsg= getCookie("carMsg")?JSON.parse(getCookie("carMsg")) : [];
-		if(this.goodMsg.length==0){str="<h1>购物车空空如也，去购物吧</h1>"}else{
+		if(this.goodMsg.length==0){str="<h1>购物车空空如也，去购物吧</h1>";this.money.innerHTML=0
+			this.allnum.innerHTML=0}else{
 		for(let i=0;i<this.goodMsg.length;i++){
 			str+=`<li mingzi="${this.goodMsg[i].name}" yanse="${this.goodMsg[i].color}" banbeng="${this.goodMsg[i].version}"><input type="checkbox" checked="checked" class="check"/><img src="${this.goodMsg[i].src}" class="img"><div>${this.goodMsg[i].name}<br><span class="color">${this.goodMsg[i].color}</span><span class="version">${this.goodMsg[i].version}</span></div><span class="price">${this.goodMsg[i].price}</span><div class="gouwu"><p><b class="jian">-</b><span class="number">${this.goodMsg[i].number}</span><b class="add">+</b></p></div><span class="allprice">${((this.goodMsg[i].number-0)*(this.goodMsg[i].price-0)).toFixed(2)}</span><input type="button" value="删除" class="delete"></li>`
 		}	
 		}
 		
 		this.goodlist.innerHTML=str;
+		window.onload=function(){
+			that.allcheck.checked=true;
+		}
 	}
 	changeNumber(){
 		var that=this
@@ -86,6 +91,12 @@ class Car{
 		}
 		setCookie("carMsg",JSON.stringify(this.goodMsg))
 		this.target.parentElement.remove();
+		if(this.goodlist.innerHTML ==""){
+			
+			this.money.innerHTML=0
+			this.allnum.innerHTML=0
+			this.goodlist.innerHTML="<h1>购物车空空如也，去购物吧</h1>"
+		}
 	}
 	allCheck(){
 //		console.log(this.allcheck)
@@ -184,7 +195,9 @@ class Car{
 		
 		}
 	jieSuan(){
+		var that=this
 		this.jiesuan.onclick=function(){
+			if(that.money.innerHTML>0)
 			location.href="fuqian.html"
 		}
 	}
