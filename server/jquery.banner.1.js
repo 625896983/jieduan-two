@@ -96,7 +96,7 @@
 			}
 
 			$("<ul class='list'>").html(str).appendTo(this).css({
-				width:"100%",
+				width:1920,
 				height:30,
 				display:"flex",
 				justifyContent:"center",

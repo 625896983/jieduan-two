@@ -1,17 +1,20 @@
 // JavaScript Document
 class Car{
 	constructor(){
+		
 		this.goodlist=document.getElementById("goodlist");
 		this.allcheck=document.getElementById("allcheck");
 		this.money=document.getElementById("money");
 		this.check=document.getElementsByClassName("check");
 		this.allnum=document.getElementById("allnum");
 		this.jiesuan=document.getElementById("jiesuan");
+		this.jiesuanbtn=document.getElementById("jiesuanbtn");
 		this.load();
 		this.changeNumber();
 		this.allCheck();
 		this.Money();
 		this.jieSuan();
+
 	}
 	load(){
 		var that=this
@@ -129,20 +132,23 @@ class Car{
 	}
 	for(let i=0;i<this.check.length;i++){
 		this.check[i].onclick=function(){
+//			console.log(1)
 			if(!this.checked){
 						that.allcheck.checked=false
 						type[i]=0
 					}else if(this.checked){
 						type[i]=1
 					}
-			console.log(type)
+//			console.log(type)
 			if(type.indexOf(0) ==-1){
 				that.allcheck.checked=true
 				
 			}else if(type.indexOf(1) ==-1){
 				that.money.innerHTML=0
 			that.allnum.innerHTML=0
+				
 			}
+//			console.log(type)
 			that.Money();
 		}
 				}	
@@ -196,12 +202,13 @@ class Car{
 		}
 	jieSuan(){
 		var that=this
-		this.jiesuan.onclick=function(){
-			if(that.money.innerHTML>0)
-			location.href="fuqian.html"
-		}
+		this.jiesuanbtn.onclick=function(){
+			if(that.money.innerHTML>0){location.href="fuqian.html"
+			
+		}else{alert("还没有选商品")}
 	}
+	
 	}
-
+}
 
 new Car();

@@ -4,7 +4,6 @@
 	"use strict";
 	class Scss{
 		constructor(){
-			
 		this.type=""
 		this.black=document.getElementById("black");
 		this.red=document.getElementById("red");
@@ -212,7 +211,7 @@
 					
 					
 				}
-				if(type1==0){
+				if(type1==0 && this.cjzh.value!=""){
 						alert("用户名尚未注册")
 					}
 		}

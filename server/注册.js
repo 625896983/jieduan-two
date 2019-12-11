@@ -33,7 +33,8 @@ class Zhuce{
 	zhuCe(){
 		var that=this;
 		this.ljzc.onclick=function(){
-			if(that.reg1.test(that.password.value) && that.agree.checked==true){
+			console.log(that.account.innerHTML)
+			if(that.reg1.test(that.password.value) && that.agree.checked==true && that.account.value!=""){
 				that.n=that.account.value;
 				that.p=that.password.value;
 				that.setMsg();
