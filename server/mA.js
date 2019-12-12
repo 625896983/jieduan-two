@@ -162,8 +162,53 @@ define(()=>{
 				}
 			that.box4.innerHTML = str;		
 			}
+			that.goDetail()
+		}
+		document.onkeydown=function(e){
+			if(e.keyCode==13){
+				console.log("回车")
+			console.log(that.keyword.value)
+			var type=0;
+			var str=""
+			if(that.keyword.value==""){
+				alert("搜索关键字不得为空")
+			}else if(that.keyword.value!=""){
+				for(var i=0;i<that.res.length;i++){
+//			console.log(this.res[i].goodsId)
+//			console.log(this.res[i].goodsId.search("d"))
+					console.log(that.keyword.value)
+					console.log(that.res[i].name)
+								console.log(that.res[i].name.search(that.keyword.value) !=-1)
+					if(that.res[i].name.search(that.keyword.value)!=-1){
+				console.log(that.res[i].name)				
+				str +=`<div class="sbox4" index="${that.res[i].goodsId}">
+					<img src="${that.res[i].img}" alt="">
+					<h6>
+						${that.res[i].name}
+					</h6>
+					<span>
+						￥${that.res[i].price}
+					</span>
+				</div>`	;
+						
+						type=1;
+						console.log("改了type")
+//			console.log("渲染完成")		
+					}
+					
+		}
+				console.log(type==0)
+					if (type==0){
+					str="<h1>很遗憾，什么也没找到，试试其它关键字吧</h1>"
+				}
+			that.box4.innerHTML = str;		
+			}
+			that.goDetail()
+			}
+		
 			
 		}
+		
 	}
 	goDetail(){
 		var that=this;

@@ -18,11 +18,13 @@ class Car{
 	}
 	load(){
 		var that=this
-		var str=""
+		var str="";
+		this.type=[]
 		this.goodMsg= getCookie("carMsg")?JSON.parse(getCookie("carMsg")) : [];
 		if(this.goodMsg.length==0){str="<h1>购物车空空如也，去购物吧</h1>";this.money.innerHTML=0
 			this.allnum.innerHTML=0}else{
 		for(let i=0;i<this.goodMsg.length;i++){
+			this.type.push(1)
 			str+=`<li mingzi="${this.goodMsg[i].name}" yanse="${this.goodMsg[i].color}" banbeng="${this.goodMsg[i].version}"><input type="checkbox" checked="checked" class="check"/><img src="${this.goodMsg[i].src}" class="img"><div>${this.goodMsg[i].name}<br><span class="color">${this.goodMsg[i].color}</span><span class="version">${this.goodMsg[i].version}</span></div><span class="price">${this.goodMsg[i].price}</span><div class="gouwu"><p><b class="jian">-</b><span class="number">${this.goodMsg[i].number}</span><b class="add">+</b></p></div><span class="allprice">${((this.goodMsg[i].number-0)*(this.goodMsg[i].price-0)).toFixed(2)}</span><input type="button" value="删除" class="delete"></li>`
 		}	
 		}
@@ -100,23 +102,41 @@ class Car{
 			this.allnum.innerHTML=0
 			this.goodlist.innerHTML="<h1>购物车空空如也，去购物吧</h1>"
 		}
+//		for(let i=0;i<this.check.length;i++){
+//			if(this.check[i].checked==true){
+//				this.type[i]=1
+//			}
+//			if(this.check[i].checked==false){
+//				this.type[i]=0
+//			}
+//		}
+		this.type=[];
+		for(let i=0;i<this.check.length;i++){
+			if(this.check[i].checked==true){this.type.push(1)}else if(this.check[i].checked==false){
+			this.type.push(0)	
+			}
+		}
+		console.log(this.type)
+		this.allCheck();
+		
 	}
 	allCheck(){
 //		console.log(this.allcheck)
 //		console.log(this.check)
-		var that= this
-		var type=[]
-		for(let i=0;i<that.check.length;i++){
-			type.push(1)
-		}
+//		var that= this
+//		this.type=[]
+//		for(let i=0;i<that.check.length;i++){
+//			this.type.push(1)
+//		}
 //	console.log(type)
+		var that=this;
 		this.allcheck.onclick=function(){
 			
 			if(that.allcheck.checked ){
 			
 				for(let i=0;i<that.check.length;i++){
 					that.check[i].checked=true
-					type[i]=1
+					that.type[i]=1
 				}
 			}else{
 				that.money.innerHTML=0
@@ -124,31 +144,32 @@ class Car{
 				for(let i=0;i<that.check.length;i++){
 					
 					that.check[i].checked=false
-					type[i]=0
+					that.type[i]=0
 					
 			}
 		}
 		that.Money();
+			console.log(that.type)
 	}
 	for(let i=0;i<this.check.length;i++){
 		this.check[i].onclick=function(){
 //			console.log(1)
 			if(!this.checked){
 						that.allcheck.checked=false
-						type[i]=0
+						that.type[i]=0
 					}else if(this.checked){
-						type[i]=1
+						that.type[i]=1
 					}
 //			console.log(type)
-			if(type.indexOf(0) ==-1){
+			if(that.type.indexOf(0) ==-1){
 				that.allcheck.checked=true
 				
-			}else if(type.indexOf(1) ==-1){
+			}else if(that.type.indexOf(1) ==-1){
 				that.money.innerHTML=0
 			that.allnum.innerHTML=0
 				
 			}
-//			console.log(type)
+			console.log(that.type)
 			that.Money();
 		}
 				}	
